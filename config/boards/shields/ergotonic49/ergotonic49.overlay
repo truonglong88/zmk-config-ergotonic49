@@ -33,19 +33,18 @@
 	rows = <4>;
   	columns = <14>;
 	
-	left {
+	/*left {
 		kscan = <&kscan_left>;
-		column-offset = <7>;
-	};
+	};*/
 	
 	right {
 		kscan = <&kscan_right>;
-		
+		column-offset = <7>;		
 	};
 	
     };
     
-    kscan_left: kscan_left {
+    /*kscan_left: kscan_left {
 	compatible = "zmk,kscan-gpio-matrix";
 	label = "KSCAN_LEFT";
 
@@ -67,7 +66,7 @@
     	, <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
     	, <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	;
-    };
+    };*/
     
     kscan_right: kscan_right {
 	compatible = "zmk,kscan-gpio-matrix";
