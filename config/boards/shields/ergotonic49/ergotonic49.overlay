@@ -33,9 +33,9 @@
 	rows = <4>;
   	columns = <14>;
 	
-	/*left {
+	left {
 		kscan = <&kscan_left>;
-	};*/
+	};
 	
 	right {
 		kscan = <&kscan_right>;
@@ -44,7 +44,7 @@
 	
     };
     
-    /*kscan_left: kscan_left {
+    kscan_left: kscan_left {
 	compatible = "zmk,kscan-gpio-matrix";
 	label = "KSCAN_LEFT";
 
@@ -66,13 +66,13 @@
     	, <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
     	, <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	;
-    };*/
+    };
     
     kscan_right: kscan_right {
 	compatible = "zmk,kscan-gpio-matrix";
 	label = "KSCAN_RIGHT";
 
-	diode-direction = "col2row";
+	diode-direction = "row2col";
 
 	col-gpios
     	= <&pro_micro 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
