@@ -33,11 +33,11 @@
 	rows = <4>;
   	columns = <14>;
 	
-	left {
+	right {
 		kscan = <&kscan_left>;
 	};
 
-	right {
+	left {
 		kscan = <&kscan_right>;
 		column-offset = <7>;
 	};
