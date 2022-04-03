@@ -6,4 +6,8 @@ if SHIELD_ERGOTONIC49
 config ZMK_KEYBOARD_NAME
     default "Ergotonic49"
 
+# Enabling the composite kscan driver
+config ZMK_KSCAN_COMPOSITE_DRIVER
+	default y
+
 endif
