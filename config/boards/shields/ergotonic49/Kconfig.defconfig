@@ -6,8 +6,9 @@ if SHIELD_ERGOTONIC49
 config ZMK_KEYBOARD_NAME
     default "Ergotonic49"
 
-CONFIG_BUILD_OUTPUT_UF2=y
-
+config CONFIG_BUILD_OUTPUT_UF2
+    default y
+    
 # Enabling the composite kscan driver
 config ZMK_KSCAN_COMPOSITE_DRIVER
 	default y
