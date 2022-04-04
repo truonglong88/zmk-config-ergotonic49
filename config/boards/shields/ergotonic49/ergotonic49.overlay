@@ -28,25 +28,10 @@
     };
 
     kscan: kscan {
-	compatible = "zmk,kscan-composite";
+	compatible = "zmk,kscan-gpio-matrix";
 	label = "KSCAN";
 	rows = <4>;
   	columns = <14>;
-	
-	left {
-		kscan = <&kscan_left>;
-	};
-	
-	right {
-		kscan = <&kscan_right>;
-		column-offset = <7>;		
-	};
-	
-    };
-    
-    kscan_left: kscan_left {
-	compatible = "zmk,kscan-gpio-matrix";
-	label = "KSCAN_LEFT";
 
 	diode-direction = "col2row";
 
@@ -66,12 +51,7 @@
     	, <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
     	, <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 	;
-    };
-    
-    kscan_right: kscan_right {
-	compatible = "zmk,kscan-gpio-matrix";
-	label = "KSCAN_RIGHT";
-
+	
 	diode-direction = "row2col";
 
 	col-gpios
@@ -89,6 +69,10 @@
 	, <&pro_micro 19 (GPIO_ACTIVE_LOW)>
 	, <&pro_micro 18 (GPIO_ACTIVE_LOW)>
 	;
+	
+	//column-offset = <7>;		
+
+	
     };
 
 };
