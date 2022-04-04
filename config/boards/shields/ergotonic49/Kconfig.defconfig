@@ -2,15 +2,13 @@
 # SPDX-License-Identifier: MIT
 
 if SHIELD_ERGOTONIC49
+	config ZMK_KEYBOARD_NAME
+		default "Ergotonic49"
 
-config ZMK_KEYBOARD_NAME
-    default "Ergotonic49"
+	# Enabling the composite kscan driver
+	config ZMK_KSCAN_COMPOSITE_DRIVER
+		default y
 
-# Enabling the composite kscan driver
-config ZMK_KSCAN_COMPOSITE_DRIVER
-	default y
-
-config ZMK_KSCAN_MATRIX_POLLING
-	default y
-
+	config ZMK_KSCAN_MATRIX_POLLING
+		default y
 endif
